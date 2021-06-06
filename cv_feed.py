@@ -14,7 +14,8 @@ def main():
     LINE_Y1 = int(sys.argv[2])
     LINE_X2 = int(sys.argv[3])
     LINE_Y2 = int(sys.argv[4])
-    nayanam(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2)
+    sensitivity = int(sys.argv[5])
+    nayanam(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,sensitivity)
 
 
 
