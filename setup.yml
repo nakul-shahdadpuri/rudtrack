@@ -1,0 +1,13 @@
+name: rudtrack
+
+dependencies:
+  - python==3.7
+  - pip
+  - matplotlib
+  - opencv
+  - pip:
+    - tensorflow==2.5
+    - lxml
+    - tqdm
+    - seaborn
+    - pillow
