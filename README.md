@@ -19,7 +19,7 @@ pip install -r setup.txt
 
 ## For Live Feeds
 ```sh
-python video_analysis [IP] [LINE_X1] [LINE_Y1] [LINE_X2] [LINE_Y2] [Sensitivity] [Area]
+python live_analysis [IP] [LINE_X1] [LINE_Y1] [LINE_X2] [LINE_Y2] [Sensitivity] [Area]
 ```
 Here the IP refers to the IP address of the live feed camera. Currently we only use HTTP protocol.
 
