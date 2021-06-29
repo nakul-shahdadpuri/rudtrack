@@ -21,7 +21,7 @@ def validity_condition(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,x,y,w,h,sensitivity):
 
 def main(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,sensitivity,area,video_name):
     model = init_model()
-    data = cv2.VideoCapture('test/' + video_name)
+    data = cv2.VideoCapture(video_name)
     frame_rate = 0
     frame = 0
     total_count = 0
@@ -93,7 +93,6 @@ def main(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,sensitivity,area,video_name):
         cv2.imshow("image",image_dat)
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
-    cv2.imwrite("res.jpg", crop_image)
     cv2.destroyAllWindows()
 
 
