@@ -10,7 +10,9 @@ Rudtrack provides a new approach to object detection and classification in video
 
 ```sh
 git clone https://github.com/nakul-shahdadpuri/rudtrack.git
-conda create --name rudtrack
+conda env create -f setup.yml
+conda activate rudtrack
+pip install -r setup.txt
 ```
 
 # Usage
