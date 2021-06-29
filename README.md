@@ -17,7 +17,31 @@ pip install -r setup.txt
 
 # Usage
 
+## For Live Feeds
+```sh
+python video_analysis [IP] [LINE_X1] [LINE_Y1] [LINE_X2] [LINE_Y2] [Sensitivity] [Area]
+```
+Here the IP refers to the IP address of the live feed camera. Currently we only use HTTP protocol.
 
+## For Videos
+```sh
+python video_analysis [VIDEO PATH] [LINE_X1] [LINE_Y1] [LINE_X2] [LINE_Y2] [Sensitivity] [Area]
+```
+
+Here X1, X2, Y1, Y2 corresbond to the rectangle coordinates in which the desired object is to be detected. The Sensitivity Parameter is used so that an object lying outside the rectangle zone also gets detected if a certain section of the object is in the zone. 
+
+The area parameter decided the minimum box area an object should be to be detected by the classifier.
+ ```
+ A = 1000 and sensitivity = 4 
+ ```
+ could be set normally and changed upon user.
+ 
+ 
+ If you want to analyse for the entire video feed, 
+ set 
+ ```sh
+ X1=0  X2=800  Y1=0  Y2=800
+```
 ## Architecture Pipeline 
 
 
@@ -30,3 +54,6 @@ OpenCV==4.1.1
 ```
 
 ## References
+https://www.tensorflow.org/api_docs/python/tf/keras/applications/mobilenet/MobileNet
+https://www.kasperkamperman.com/blog/computer-vision/computervision-framedifferencing/
+
