@@ -43,6 +43,8 @@ The area parameter decided the minimum box area an object should be to be detect
  X1=0  X2=800  Y1=0  Y2=800
 ```
 ## Architecture Pipeline 
+![Blank diagram (1)](https://user-images.githubusercontent.com/43999912/123781378-cba15d00-d8f1-11eb-84cd-b5eec779d2ce.png)
+
 
 
 
