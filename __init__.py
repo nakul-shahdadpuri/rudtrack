@@ -1,2 +1,3 @@
 from stream_reader import *
-from config.py import *
+from config import *
+from predictor import *
