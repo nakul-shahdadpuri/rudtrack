@@ -13,17 +13,17 @@ let win2;
 
 app.on("ready",() => {
     win = new Window({
-        width:600,
-        height:600,
-        minHeight:600,
-        minWidth:600,
-        maxHeight:600,
-        maxWidth:600,
+        width:800,
+        height:800,
+        minHeight:800,
+        minWidth:800,
+        maxHeight:800,
+        maxWidth:800,
         webPreferences: {
             nodeIntegration: true
         }
     });
-    win.loadFile('index.html')
+    win.loadFile('login.html')
 })
 
 
