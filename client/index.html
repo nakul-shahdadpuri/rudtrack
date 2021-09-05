@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P5.js</title>
+
+    <link rel="stylesheet" href="css/photon.css">
+
+    <script src="main.js" charset="utf-8"></script>
+    <style>
+      textarea{
+        width: 100%; 
+        height: 100%; 
+        font-size: 20px;
+        background-color: #302e2e;
+        color: #eeff00;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">   
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default">
+            <span class="icon icon-lamp"></span>
+            </button>
+            <button class="btn btn-default">
+            <span class="icon icon-folder"></span>
+            </button>
+            <button class="btn btn-default" onclick="increaseFont()">
+            <span class="icon icon-plus"></span>
+            </button>
+            <button class="btn btn-default" onclick="decreaseFont()">
+            <span class="icon icon-minus"></span>
+            </button>
+            </div>
+            <button class="btn btn-primary pull-right" onclick="execute()">
+              Run
+            </button>
+        </div>
+      </header>
+      <div class="window-content">
+       <textarea></textarea>
+      </div>
+      <footer class="toolbar toolbar-footer">
+        <div class="toolbar-actions">
+          <button class="btn btn-primary pull-right" onclick="saveText()">
+            Save
+          </button>
+        </div>
+      </footer>
+      <script>
+
+        // const electron = require('electron')
+        const {ipcRenderer} = electron
+
+        let textarea = document.querySelector('textarea');
+        let defaultFontSize = 20
+
+        function execute(){
+          let text = textarea.value;
+          ipcRenderer.send('execute',text)
+        }
+        function decreaseFont()
+        {
+          textarea.style.fontSize = `${--defaultFontSize}px`
+        }
+        function increaseFont(){
+          textarea.style.fontSize = `${++defaultFontSize}px`
+        }
+        function saveText()
+        {
+          let text = textarea.value;
+          console.log(text)
+          ipcRenderer.send('save',text);
+          ipcRenderer.send('delete',text);
+
+        }
+      </script>
+    </div>
+  </body>
+</html>

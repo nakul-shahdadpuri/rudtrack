@@ -1,0 +1,25 @@
+{
+  "name": "p5-js-ide",
+  "version": "1.0.0",
+  "description": "A p5.js cross-platform IDE written in electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakul-shahdadpuri/p5-js-IDE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nakul-shahdadpuri/p5-js-IDE/issues"
+  },
+  "homepage": "https://github.com/nakul-shahdadpuri/p5-js-IDE#readme",
+  "devDependencies": {
+    "electron": "^10.1.5"
+  },
+  "dependencies": {
+    "typescript": "^4.0.5"
+  }
+}
