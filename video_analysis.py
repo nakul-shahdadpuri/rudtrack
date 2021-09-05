@@ -93,6 +93,9 @@ def main(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,sensitivity,area,video_name):
         image_dat = cv2.putText(image_dat, 'frame rate = ' + str(frame_rate), (600,780),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,255), 1, cv2.LINE_AA)
         image_dat = cv2.putText(image_dat, 'counts = ' + str(total_count), (10,780),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,0,0), 1, cv2.LINE_AA)
         
+        f = open("buffer.txt","w")
+        f.write(str(total_count) + ',' + str(len(valid_boxes)) + ',' + str(frame_rate) +','+ '1')
+        f.close()
         cv2.imshow("image",image_dat)
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
