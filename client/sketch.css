@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.body{
+  background-image: url('https://wallpaperaccess.com/full/1285952.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+canvas {
+  display: block;
+}

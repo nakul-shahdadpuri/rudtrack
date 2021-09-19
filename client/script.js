@@ -19,7 +19,7 @@ function show(data) {
     console.log(data)
     // Setting innerHTML as tab variable
     let tab = `<li>Active Status =  ${data.active} </li>
-    <li>Fps = ${data.frame_rate}</li>
+    <li>Frame Rate = ${data.frame_rate}</li>
     <li>Instant Count = ${data.instant_count}</li> 
     <li>Total Count = ${data.total_count}</li>`
 
