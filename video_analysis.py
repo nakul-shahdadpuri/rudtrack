@@ -67,13 +67,13 @@ def main(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,sensitivity,area,video_name):
         for i in boxes:
             x,y,w,h = i
             if w * h > area and validity_condition(LINE_X1,LINE_Y1,LINE_X2,LINE_Y2,x,y,w,h,sensitivity):
-                crop_image = reference_data[y :int(y+1.2*h), x:int(x+1.2*w)]
-                model_image = load_img(crop_image)
-                output = predict(model_image,model)
-                if output[2] > 0.8:
-                    cv2.rectangle(image_dat,(x,y),(x + w,y + h),(0,0,255),3)
-                    image_dat = cv2.putText(image_dat, str(output[1])  +'-'+ str(output[2]), (x +w,y),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,255), 1, cv2.LINE_AA)
-                    valid_boxes.append(i)
+                # crop_image = reference_data[y :int(y+1.2*h), x:int(x+1.2*w)]
+                # model_image = load_img(crop_image)
+                # output = predict(model_image,model)
+                # if output[2] > 0.8:
+                #     image_dat = cv2.putText(image_dat, str(output[1])  +'-'+ str(output[2]), (x +w,y),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,255), 1, cv2.LINE_AA)
+                cv2.rectangle(image_dat,(x,y),(x + w,y + h),(0,0,255),3)
+                valid_boxes.append(i)
         
         # if len(valid_boxes) > 3:
         # 	increment  = len(valid_boxes) // 3

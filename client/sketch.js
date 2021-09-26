@@ -1,6 +1,6 @@
 let angles = [100,200,30,30];
 let names = ["Motorbikes","Cars","Heavy Vehicles","Others"]
-let probs = [0.4,0.4,0.1,0.3]
+let probs = [0.15,0.4,0.25,0.2]
 let counts = [0,0,0,0]
 
 function preload() {
