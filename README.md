@@ -55,8 +55,7 @@ tensorflow==2.5.0
 OpenCV==4.1.1
 ```
 
-## References
-https://www.tensorflow.org/api_docs/python/tf/keras/applications/mobilenet/MobileNet
+## Publication
 
-https://www.kasperkamperman.com/blog/computer-vision/computervision-framedifferencing/
+http://thedesignengineering.com/index.php/DE/article/view/8445
 
